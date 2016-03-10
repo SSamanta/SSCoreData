@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1CE50C881C91A20E00E7B852 /* SSCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CE50C871C91A20E00E7B852 /* SSCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1CE50C901C91A22D00E7B852 /* SSCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE50C8F1C91A22D00E7B852 /* SSCoreDataManager.swift */; };
+		1CE50CC41C91A6EA00E7B852 /* SSDataSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE50CC31C91A6EA00E7B852 /* SSDataSourceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		1CE50C871C91A20E00E7B852 /* SSCoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCoreData.h; sourceTree = "<group>"; };
 		1CE50C891C91A20E00E7B852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CE50C8F1C91A22D00E7B852 /* SSCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCoreDataManager.swift; sourceTree = "<group>"; };
+		1CE50CC31C91A6EA00E7B852 /* SSDataSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDataSourceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			children = (
 				1CE50C871C91A20E00E7B852 /* SSCoreData.h */,
 				1CE50C8F1C91A22D00E7B852 /* SSCoreDataManager.swift */,
+				1CE50CC31C91A6EA00E7B852 /* SSDataSourceManager.swift */,
 				1CE50C891C91A20E00E7B852 /* Info.plist */,
 			);
 			path = SSCoreData;
@@ -133,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE50CC41C91A6EA00E7B852 /* SSDataSourceManager.swift in Sources */,
 				1CE50C901C91A22D00E7B852 /* SSCoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +287,7 @@
 				1CE50C8E1C91A20E00E7B852 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

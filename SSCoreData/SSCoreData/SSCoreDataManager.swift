@@ -12,7 +12,9 @@ import CoreData
 class SSCoreDataManager: NSObject {
     
     static let sharedInstance = SSCoreDataManager()
-
+    var modelFileName : String?
+    var bundleIdenitifier : String?
+    
     lazy var applicationDocumentsDirectory: NSURL = {
         
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
@@ -20,9 +22,8 @@ class SSCoreDataManager: NSObject {
     }()
     
     lazy var managedObjectModel: NSManagedObjectModel = {
-        
-        let frameworkBundle = NSBundle(identifier: "com.susim.SSCoreData")
-        let modelURL = frameworkBundle!.URLForResource("coredata", withExtension: "momd")!
+        let bundle = NSBundle(identifier: self.bundleIdenitifier!)
+        let modelURL = bundle!.URLForResource(self.modelFileName!, withExtension: "momd")!
         return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
     
@@ -52,7 +53,6 @@ class SSCoreDataManager: NSObject {
     }()
     
     lazy var managedObjectContext: NSManagedObjectContext? = {
-        
         let coordinator = self.persistentStoreCoordinator
         if coordinator == nil {
             return nil
